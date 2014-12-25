@@ -1,3 +1,6 @@
 # System Files
 .DS_*
 .ds_*
+
+# SASS Files
+.sass-cache

@@ -1,0 +1,77 @@
+//
+// Partials Import
+//
+
+@import 'mixins',
+		'modules/animate-sass/animate';
+
+
+//
+// Font Imports
+//
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700,300);
+
+//
+// Main Styles
+//
+
+.animated {
+    @include animate-prefixer(animation-duration, $base-duration);
+    @include animate-prefixer(animation-fill-mode, both);
+
+    &.hinge {
+        @include animate-prefixer(animation-duration, $base-duration * 2);
+    }
+}
+
+html,
+body {
+	-webkit-backface-visibility: hidden; // Addresses a small issue in webkit: http://bit.ly/NEdoDq
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5,
+h6,
+p {
+	@include vertical-align;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+h1 {
+	font-family: 'Roboto Slab', Georgia, serif;
+    font-size: 2.45em;
+    font-weight: 100;
+}
+
+p {
+    font-size: 1.6em;
+    font-weight: 200;
+}
+
+#container {
+    background: #fff;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+
+    .brand {
+	    background-color: #098ACC;
+	    width: 100%;
+	    height: 100%;
+	    margin: 0 auto;
+	    position: relative;
+	    text-align: center;
+	}
+}
